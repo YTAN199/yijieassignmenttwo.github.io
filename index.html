@@ -47,11 +47,39 @@ body, html {
   background-color: #555;
   color: white;
 }
-  
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#Gyms {background-color:red;}
+#Fields {background-color:green;}
+#Swimmingpools {background-color:blue;}
+#Programmes {background-color:orange;}
   
 </style>
 
-<body class="container">
+<body>
 
   <div class="hero-image">
   <div class="hero-text">
@@ -60,9 +88,51 @@ body, html {
     <button>press for something</button>
   </div>
 </div>
-  
+
+  <div id="Gym" class="tabcontent">
+  <h1>Gyms</h1>
+  <p>write some stuff</p>
+</div>
+
+<div id="Fields" class="tabcontent">
+  <h1>Fields</h1>
+  <p>write some stuff</p> 
+</div>
+
+<div id="Swimmingpools" class="tabcontent">
+  <h1>Swimming Pools</h1>
+  <p>write some stuff</p>
+</div>
+
+<div id="Programmes" class="tabcontent">
+  <h1>Programmes</h1>
+  <p>write some stuff</p>
+</div>
+
+<button class="tablink" onclick="openCity('Gym', this, 'red')" id="defaultOpen">London</button>
+<button class="tablink" onclick="openCity('Fields', this, 'green')">Paris</button>
+<button class="tablink" onclick="openCity('Swimming Pools', this, 'blue')">Tokyo</button>
+<button class="tablink" onclick="openCity('Programmes', this, 'orange')">Oslo</button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
  
-  
+ <p>page content</p> 
 
 
 </body>

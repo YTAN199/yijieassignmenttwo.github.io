@@ -89,6 +89,11 @@ body, html {
   </div>
 </div>
 
+<button class="tablink" onclick="openThing('Gym', this, 'red')" id="defaultOpen">Gyms</button>
+<button class="tablink" onclick="openThing('Fields', this, 'green')">Fields</button>
+<button class="tablink" onclick="openThing('Swimming Pools', this, 'blue')">Swimming Pools</button>
+<button class="tablink" onclick="openThing('Programmes', this, 'orange')">Programmes</button>
+
   <div id="Gym" class="tabcontent">
   <h1>Gyms</h1>
   <p>write some stuff</p>
@@ -109,13 +114,13 @@ body, html {
   <p>write some stuff</p>
 </div>
 
-<button class="tablink" onclick="openCity('Gym', this, 'red')" id="defaultOpen">Gyms</button>
-<button class="tablink" onclick="openCity('Fields', this, 'green')">Fields</button>
-<button class="tablink" onclick="openCity('Swimming Pools', this, 'blue')">Swimming Pools</button>
-<button class="tablink" onclick="openCity('Programmes', this, 'orange')">Programmes</button>
+<button class="tablink" onclick="openThing('Gym', this, 'red')" id="defaultOpen">Gyms</button>
+<button class="tablink" onclick="openThing('Fields', this, 'green')">Fields</button>
+<button class="tablink" onclick="openThing('Swimming Pools', this, 'blue')">Swimming Pools</button>
+<button class="tablink" onclick="openThing('Programmes', this, 'orange')">Programmes</button>
 
 <script>
-function openCity(cityName,elmnt,color) {
+function openThing(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -125,13 +130,14 @@ function openCity(cityName,elmnt,color) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].style.backgroundColor = "";
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(pageName).style.display = "block";
   elmnt.style.backgroundColor = color;
-
 }
+
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
- 
+</script>
+   
  <p>page content</p> 
 
 

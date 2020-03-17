@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>page name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  </head>
+  
+<style>
+ 
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("gympic3.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+  
+  .hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+  
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: blue;
+  display: none;
+  padding: 100px 20px;
+  text-align: center;
+  height: 100%;
+}
+
+#Gym {background-color:white;}
+#Fields {background-color:white;}
+#Swimmingpools {background-color:white;}
+#Programmes {background-color:white;}
+  
+</style>
+
+<body>
+
+<nav>
+ <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="page2.html">Gyms</a></li>
+  <li><a href="page3.html">Fields</a></li>
+  <li><a href="page4.html">Swimming Pools</a></li>
+  <li><a href="page5.html">Programmes</a></li>
+ </ul>
+</nav>
+
+  <div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">ActiveSG Fitness Facilities</h1>
+    <p style="font-family: PT serif"; "font-size: 18px";>
+      “All progress takes place outside the comfort zone." <br> 
+      — Michael John Bobak
+    </p>
+  </div>
+</div>
+
+<button class="tablink" onclick="openThing('Gym', this, 'red')" id="defaultOpen">Gyms</button>
+<button class="tablink" onclick="openThing('Fields', this, 'green')">Fields</button>
+<button class="tablink" onclick="openThing('Swimmingpools', this, 'blue')">Swimming Pools</button>
+<button class="tablink" onclick="openThing('Programmes', this, 'orange')">Programmes</button>
+
+  <div id="Gym" class="tabcontent">
+  <h1>Gyms</h1>
+  <p>write some stuff</p>
+</div>
+
+<div id="Fields" class="tabcontent">
+  <h1>Fields</h1>
+  <p>write some stuff</p> 
+</div>
+
+<div id="Swimmingpools" class="tabcontent">
+  <h1>Swimming Pools</h1>
+  <p>write some stuff</p>
+</div>
+
+<div id="Programmes" class="tabcontent">
+  <h1>Programmes</h1>
+  <p>write some stuff</p>
+</div>
+
+
+<script>
+function openThing(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+
+
+
+</body>
+</html>

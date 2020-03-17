@@ -7,6 +7,33 @@
   </head>
   
 <style>
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
  
 body, html {
   height: 100%;
@@ -73,24 +100,10 @@ body, html {
   height: 100%;
 }
 
-#Gym {background-color:white;}
-#Fields {background-color:white;}
-#Swimmingpools {background-color:white;}
-#Programmes {background-color:white;}
-  
+
 </style>
 
 <body>
-
-<nav>
- <ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="page2.html">Gyms</a></li>
-  <li><a href="page3.html">Fields</a></li>
-  <li><a href="page4.html">Swimming Pools</a></li>
-  <li><a href="page5.html">Programmes</a></li>
- </ul>
-</nav>
 
   <div class="hero-image">
   <div class="hero-text">
@@ -102,52 +115,17 @@ body, html {
   </div>
 </div>
 
-<button class="tablink" onclick="openThing('Gym', this, 'red')" id="defaultOpen">Gyms</button>
-<button class="tablink" onclick="openThing('Fields', this, 'green')">Fields</button>
-<button class="tablink" onclick="openThing('Swimmingpools', this, 'blue')">Swimming Pools</button>
-<button class="tablink" onclick="openThing('Programmes', this, 'orange')">Programmes</button>
-
-  <div id="Gym" class="tabcontent">
-  <h1>Gyms</h1>
-  <p>write some stuff</p>
-</div>
-
-<div id="Fields" class="tabcontent">
-  <h1>Fields</h1>
-  <p>add some field stuff</p> 
-</div>
-
-<div id="Swimmingpools" class="tabcontent">
-  <h1>Swimming Pools</h1>
-  <p>write some stuff</p>
-</div>
-
-<div id="Programmes" class="tabcontent">
-  <h1>Programmes</h1>
-  <p>write some stuff</p>
-</div>
-
-
-<script>
-function openThing(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-   
-
+<nav>
+ <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="page2.html">Gyms</a></li>
+  <li><a href="page3.html">Fields</a></li>
+  <li><a href="page4.html">Swimming Pools</a></li>
+  <li><a href="page5.html">Programmes</a></li>
+ </ul>
+</nav>
+  
+ 
 
 
 </body>

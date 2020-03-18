@@ -7,34 +7,29 @@
   </head>
   
 <style>
- ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+ .topnav {
   overflow: hidden;
   background-color: #333;
 }
 
-li {
+.topnav a {
   float: left;
-}
-
-li a {
-  display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 110px;
   text-decoration: none;
+  font-size: 17px;
 }
 
-li a:hover:not(.active) {
-  background-color: #111;
+.topnav a:hover {
+  background-color: lightgray;
+  color: black;
 }
 
-.active {
-  background-color: #4CAF50;
+.topnav a.active {
+  background-color: salmon;
+  color: white;
 }
- 
 body, html {
   height: 100%;
   margin: 0;
@@ -134,15 +129,13 @@ th, td {
   </div>
 </div>
 
-<nav>
- <ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="page2.html">Gyms</a></li>
-  <li><a href="page3.html">Fields</a></li>
-  <li><a href="page4.html">Swimming Pools</a></li>
-  <li><a href="page5.html">Programmes</a></li>
- </ul>
-</nav>
+<div class="topnav">
+<a href="index.html">Home</a>
+<a href="page2.html" >Gyms</a>
+<a href="page3.html">Fields</a>
+<a class="active" href="page4.html">Swimming Pools</a>
+<a href="page5.html">Facilities</a>
+</div>
   
 <div class="container">
   <img src="pool3.jpg" alt="pool" style="width:100%;">
